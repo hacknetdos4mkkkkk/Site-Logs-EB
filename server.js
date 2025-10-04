@@ -8,7 +8,7 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const API_KEY = process.env.LOGS_API_KEY || 'COLOQUE_SUA_API_KEY_AQUI'; // troque aqui ou na env var
+const API_KEY = process.env.LOGS_API_KEY || 'd4b7c9f2a6e04f3bb8e0e91f7a1e62fd'; // troque aqui ou na env var
 
 // DB (arquivo logs.db criado automaticamente)
 const db = new Database(path.join(__dirname, 'logs.db'));
@@ -238,5 +238,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
   console.log('Servidor rodando na porta', PORT);
-  console.log('API_KEY:', API_KEY === 'COLOQUE_SUA_API_KEY_AQUI' ? '[ATENÇÃO: troque API_KEY]' : '[OK]');
+  console.log('API_KEY:', API_KEY === 'd4b7c9f2a6e04f3bb8e0e91f7a1e62fd' ? '[ATENÇÃO: troque API_KEY]' : '[OK]');
 });
